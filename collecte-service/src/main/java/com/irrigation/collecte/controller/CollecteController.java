@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/collecte")
-@CrossOrigin("*")
 @RequiredArgsConstructor
 public class CollecteController {
     private final CollecteService collecteService;
@@ -70,4 +69,3 @@ public class CollecteController {
         collecteService.deleteObservation(id);
     }
 }
-

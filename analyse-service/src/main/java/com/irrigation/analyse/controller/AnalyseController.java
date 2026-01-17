@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/analyse")
-@CrossOrigin("*")
 @RequiredArgsConstructor
 public class AnalyseController {
     private final AnalyseService analyseService;

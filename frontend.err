@@ -1,0 +1,572 @@
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'sensorsCount' does not exist on type 'WritableSignal<{ sensorsCount: number; recommendationsCount: number; observationsCount: number; modelsCount: number; averagePrecision: number; }>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/dashboard/dashboard.html:7:77:
+[37m      7 │ ...ize: 3rem; font-weight: 700; margin: 0;">{{stats.[32msensorsCount[37m}}</p>
+        ╵                                                     [32m~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component DashboardComponent.
+
+    src/app/components/dashboard/dashboard.ts:10:15:
+[37m      10 │   templateUrl: [32m'./dashboard.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'recommendationsCount' does not exist on type 'WritableSignal<{ sensorsCount: number; recommendationsCount: number; observationsCount: number; modelsCount: number; averagePrecision: number; }>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/dashboard/dashboard.html:11:77:
+[37m      11 │ ...; font-weight: 700; margin: 0;">{{stats.[32mrecommendationsCount[37m}}</p>
+         ╵                                            [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component DashboardComponent.
+
+    src/app/components/dashboard/dashboard.ts:10:15:
+[37m      10 │   templateUrl: [32m'./dashboard.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'observationsCount' does not exist on type 'WritableSignal<{ sensorsCount: number; recommendationsCount: number; observationsCount: number; modelsCount: number; averagePrecision: number; }>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/dashboard/dashboard.html:15:77:
+[37m      15 │ ...rem; font-weight: 700; margin: 0;">{{stats.[32mobservationsCount[37m}}</p>
+         ╵                                               [32m~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component DashboardComponent.
+
+    src/app/components/dashboard/dashboard.ts:10:15:
+[37m      10 │   templateUrl: [32m'./dashboard.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'modelsCount' does not exist on type 'WritableSignal<{ sensorsCount: number; recommendationsCount: number; observationsCount: number; modelsCount: number; averagePrecision: number; }>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/dashboard/dashboard.html:19:77:
+[37m      19 │ ...ize: 3rem; font-weight: 700; margin: 0;">{{stats.[32mmodelsCount[37m}}</p>
+         ╵                                                     [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component DashboardComponent.
+
+    src/app/components/dashboard/dashboard.ts:10:15:
+[37m      10 │   templateUrl: [32m'./dashboard.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'averagePrecision' does not exist on type 'WritableSignal<{ sensorsCount: number; recommendationsCount: number; observationsCount: number; modelsCount: number; averagePrecision: number; }>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/dashboard/dashboard.html:23:77:
+[37m      23 │ ...rem; font-weight: 700; margin: 0;">{{stats.[32maveragePrecision[37m}}%</p>
+         ╵                                               [32m~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component DashboardComponent.
+
+    src/app/components/dashboard/dashboard.ts:10:15:
+[37m      10 │   templateUrl: [32m'./dashboard.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:9:36:
+[37m      9 │ ...<h3 style="margin-top:0">{{ [32misEditing[37m ? 'Modifier' : 'Ajouter' }...
+        ╵                                [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'type' does not exist on type 'WritableSignal<Capteur>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:13:51:
+[37m      13 │                 <select [(ngModel)]="currentSensor.[32mtype[37m"
+         ╵                                                    [32m~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'type' does not exist on type 'WritableSignal<Capteur>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:13:51:
+[37m      13 │                 <select [(ngModel)]="currentSensor.[32mtype[37m"
+         ╵                                                    [32m~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'parcelleId' does not exist on type 'WritableSignal<Capteur>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:22:64:
+[37m      22 │ ...       <input type="number" [(ngModel)]="currentSensor.[32mparcelleId[37m"
+         ╵                                                           [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'parcelleId' does not exist on type 'WritableSignal<Capteur>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:22:64:
+[37m      22 │ ...       <input type="number" [(ngModel)]="currentSensor.[32mparcelleId[37m"
+         ╵                                                           [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'emplacement' does not exist on type 'WritableSignal<Capteur>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:27:62:
+[37m      27 │ ...(ngModel)]="currentSensor.[32memplacement[37m" placeholder="Ex: Zone Nord"
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'emplacement' does not exist on type 'WritableSignal<Capteur>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:27:62:
+[37m      27 │ ...(ngModel)]="currentSensor.[32memplacement[37m" placeholder="Ex: Zone Nord"
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:31:70:
+[37m      31 │ ... (click)="saveSensor()">{{ [32misEditing[37m ? 'Enregistrer' : 'Ajouter...
+         ╵                               [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2322: Type 'WritableSignal<Capteur[]>' is not assignable to type 'NgIterable<any> | null | undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/sensors/sensors.html:39:27:
+[37m      39 │         <div *ngFor="let s [32mof sensors[37m" class="glass-card" style="p...
+         ╵                            [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component SensorsComponent.
+
+    src/app/components/sensors/sensors.ts:11:15:
+[37m      11 │   templateUrl: [32m'./sensors.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:9:36:
+[37m      9 │ ...<h3 style="margin-top:0">{{ [32misEditing[37m ? 'Modifier' : 'Ajouter' }...
+        ╵                                [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'capteurId' does not exist on type 'WritableSignal<Observation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:13:56:
+[37m      13 │                 <select [(ngModel)]="currentObservation.[32mcapteurId[37m"
+         ╵                                                         [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'capteurId' does not exist on type 'WritableSignal<Observation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:13:56:
+[37m      13 │                 <select [(ngModel)]="currentObservation.[32mcapteurId[37m"
+         ╵                                                         [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2322: Type 'WritableSignal<Capteur[]>' is not assignable to type 'NgIterable<any> | null | undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:15:42:
+[37m      15 │ ...    <option *ngFor="let c [32mof capteurs[37m" [value]="c.id">{{c.type}...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'valeur' does not exist on type 'WritableSignal<Observation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:20:69:
+[37m      20 │ ...t type="number" [(ngModel)]="currentObservation.[32mvaleur[37m" step="0.1"
+         ╵                                                    [32m~~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'valeur' does not exist on type 'WritableSignal<Observation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:20:69:
+[37m      20 │ ...t type="number" [(ngModel)]="currentObservation.[32mvaleur[37m" step="0.1"
+         ╵                                                    [32m~~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'unite' does not exist on type 'WritableSignal<Observation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:25:56:
+[37m      25 │                 <select [(ngModel)]="currentObservation.[32munite[37m"
+         ╵                                                         [32m~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'unite' does not exist on type 'WritableSignal<Observation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:25:56:
+[37m      25 │                 <select [(ngModel)]="currentObservation.[32munite[37m"
+         ╵                                                         [32m~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:33:75:
+[37m      33 │ ...lick)="saveObservation()">{{ [32misEditing[37m ? 'Enregistrer' : 'Ajouter'
+         ╵                                 [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2322: Type 'WritableSignal<Observation[]>' is not assignable to type 'NgIterable<any> | null | undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/observations/observations.html:54:36:
+[37m      54 │                 <tr *ngFor="let obs [32mof observations[37m"
+         ╵                                     [32m~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ObservationsComponent.
+
+    src/app/components/observations/observations.ts:11:17:
+[37m      11 │     templateUrl: [32m'./observations.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:9:36:
+[37m      9 │ ...<h3 style="margin-top:0">{{ [32misEditing[37m ? 'Modifier' : 'Ajouter' }...
+        ╵                                [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'type' does not exist on type 'WritableSignal<Modele>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:13:50:
+[37m      13 │                 <select [(ngModel)]="currentModel.[32mtype[37m"
+         ╵                                                   [32m~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'type' does not exist on type 'WritableSignal<Modele>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:13:50:
+[37m      13 │                 <select [(ngModel)]="currentModel.[32mtype[37m"
+         ╵                                                   [32m~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'version' does not exist on type 'WritableSignal<Modele>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:22:61:
+[37m      22 │ ...t type="text" [(ngModel)]="currentModel.[32mversion[37m" placeholder="1.0"
+         ╵                                            [32m~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'version' does not exist on type 'WritableSignal<Modele>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:22:61:
+[37m      22 │ ...t type="text" [(ngModel)]="currentModel.[32mversion[37m" placeholder="1.0"
+         ╵                                            [32m~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'dateApprentissage' does not exist on type 'WritableSignal<Modele>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:27:61:
+[37m      27 │ ...   <input type="date" [(ngModel)]="currentModel.[32mdateApprentissage[37m"
+         ╵                                                    [32m~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'dateApprentissage' does not exist on type 'WritableSignal<Modele>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:27:61:
+[37m      27 │ ...   <input type="date" [(ngModel)]="currentModel.[32mdateApprentissage[37m"
+         ╵                                                    [32m~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'precision' does not exist on type 'WritableSignal<Modele>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:32:63:
+[37m      32 │ ..." [(ngModel)]="currentModel.[32mprecision[37m" step="0.01" min="0" max="1"
+         ╵                                [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'precision' does not exist on type 'WritableSignal<Modele>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:32:63:
+[37m      32 │ ..." [(ngModel)]="currentModel.[32mprecision[37m" step="0.01" min="0" max="1"
+         ╵                                [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:36:69:
+[37m      36 │ ..." (click)="saveModel()">{{ [32misEditing[37m ? 'Enregistrer' : 'Ajouter...
+         ╵                               [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2322: Type 'WritableSignal<Modele[]>' is not assignable to type 'NgIterable<any> | null | undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/models/models.html:45:27:
+[37m      45 │         <div *ngFor="let m [32mof models[37m" class="glass-card" style="pa...
+         ╵                            [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component ModelsComponent.
+
+    src/app/components/models/models.ts:11:17:
+[37m      11 │     templateUrl: [32m'./models.html'[37m
+         ╵                  [32m~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:9:36:
+[37m      9 │ ...<h3 style="margin-top:0">{{ [32misEditing[37m ? 'Modifier' : 'Ajouter' }...
+        ╵                                [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'parcelleId' does not exist on type 'WritableSignal<Recommandation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:13:72:
+[37m      13 │ ...input type="number" [(ngModel)]="currentRecommendation.[32mparcelleId[37m"
+         ╵                                                           [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'parcelleId' does not exist on type 'WritableSignal<Recommandation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:13:72:
+[37m      13 │ ...input type="number" [(ngModel)]="currentRecommendation.[32mparcelleId[37m"
+         ╵                                                           [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'quantiteEau' does not exist on type 'WritableSignal<Recommandation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:18:72:
+[37m      18 │ ...number" [(ngModel)]="currentRecommendation.[32mquantiteEau[37m" step="0.1"
+         ╵                                               [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'quantiteEau' does not exist on type 'WritableSignal<Recommandation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:18:72:
+[37m      18 │ ...number" [(ngModel)]="currentRecommendation.[32mquantiteEau[37m" step="0.1"
+         ╵                                               [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'justification' does not exist on type 'WritableSignal<Recommandation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:23:70:
+[37m      23 │ ...nput type="text" [(ngModel)]="currentRecommendation.[32mjustification[37m"
+         ╵                                                        [32m~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'justification' does not exist on type 'WritableSignal<Recommandation>'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:23:70:
+[37m      23 │ ...nput type="text" [(ngModel)]="currentRecommendation.[32mjustification[37m"
+         ╵                                                        [32m~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:28:78:
+[37m      28 │ ...k)="saveRecommendation()">{{ [32misEditing[37m ? 'Enregistrer' : 'Ajouter'
+         ╵                                 [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2322: Type 'WritableSignal<Recommandation[]>' is not assignable to type 'NgIterable<any> | null | undefined'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/recommendations/recommendations.html:48:34:
+[37m      48 │                 <tr *ngFor="let r [32mof recommendations[37m"
+         ╵                                   [32m~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component RecommendationsComponent.
+
+    src/app/components/recommendations/recommendations.ts:11:15:
+[37m      11 │   templateUrl: [32m'./recommendations.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m

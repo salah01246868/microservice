@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { IrrigationService } from '../../services/irrigation.service';
 import { CommonModule } from '@angular/common';
 import { forkJoin } from 'rxjs';
@@ -10,13 +10,13 @@ import { forkJoin } from 'rxjs';
   templateUrl: './dashboard.html'
 })
 export class DashboardComponent implements OnInit {
-  stats = {
+  stats = signal({
     sensorsCount: 0,
     recommendationsCount: 0,
     observationsCount: 0,
     modelsCount: 0,
     averagePrecision: 0
-  };
+  });
 
   constructor(private irrigationService: IrrigationService) { }
 
@@ -31,17 +31,18 @@ export class DashboardComponent implements OnInit {
       observations: this.irrigationService.getObservations(),
       models: this.irrigationService.getModeles()
     }).subscribe(({ sensors, recommendations, observations, models }) => {
-      this.stats.sensorsCount = sensors.length;
-      this.stats.recommendationsCount = recommendations.length;
-      this.stats.observationsCount = observations.length;
-      this.stats.modelsCount = models.length;
-
+      let avgPrecision = 0;
       if (models.length > 0) {
-        const avgPrecision = models.reduce((sum, m) => sum + (m.precision || 0), 0) / models.length;
-        this.stats.averagePrecision = Math.round(avgPrecision * 100);
-      } else {
-        this.stats.averagePrecision = 0;
+        avgPrecision = Math.round((models.reduce((sum, m) => sum + (m.precision || 0), 0) / models.length) * 100);
       }
+
+      this.stats.set({
+        sensorsCount: sensors.length,
+        recommendationsCount: recommendations.length,
+        observationsCount: observations.length,
+        modelsCount: models.length,
+        averagePrecision: avgPrecision
+      });
     });
   }
 }

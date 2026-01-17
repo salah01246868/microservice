@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { IrrigationService } from '../../services/irrigation.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -11,9 +11,9 @@ import { Recommandation } from '../../models/interfaces';
   templateUrl: './recommendations.html'
 })
 export class RecommendationsComponent implements OnInit {
-  recommendations: Recommandation[] = [];
-  currentRecommendation: Recommandation = { id: 0, parcelleId: 1, quantiteEau: 20.0, justification: '' };
-  isEditing = false;
+  recommendations = signal<Recommandation[]>([]);
+  currentRecommendation = signal<Recommandation>({ id: 0, parcelleId: 1, quantiteEau: 20.0, justification: '' });
+  isEditing = signal(false);
 
   constructor(private irrigationService: IrrigationService) { }
 
@@ -23,18 +23,19 @@ export class RecommendationsComponent implements OnInit {
 
   refresh(): void {
     this.irrigationService.getAllRecommandations().subscribe(data => {
-      this.recommendations = data;
+      this.recommendations.set(data);
     });
   }
 
   saveRecommendation(): void {
-    if (this.isEditing && this.currentRecommendation.id) {
-      this.irrigationService.updateRecommandation(this.currentRecommendation.id, this.currentRecommendation).subscribe(() => {
+    const recData = this.currentRecommendation();
+    if (this.isEditing() && recData.id) {
+      this.irrigationService.updateRecommandation(recData.id, recData).subscribe(() => {
         this.resetForm();
         this.refresh();
       });
     } else {
-      const { id, ...newRec } = this.currentRecommendation;
+      const { id, ...newRec } = recData;
       this.irrigationService.createRecommandation(newRec as Recommandation).subscribe(() => {
         this.resetForm();
         this.refresh();
@@ -43,8 +44,8 @@ export class RecommendationsComponent implements OnInit {
   }
 
   editRecommendation(recommendation: Recommandation): void {
-    this.currentRecommendation = { ...recommendation };
-    this.isEditing = true;
+    this.currentRecommendation.set({ ...recommendation });
+    this.isEditing.set(true);
   }
 
   deleteRecommendation(id: number): void {
@@ -56,7 +57,7 @@ export class RecommendationsComponent implements OnInit {
   }
 
   resetForm(): void {
-    this.currentRecommendation = { id: 0, parcelleId: 1, quantiteEau: 20.0, justification: '' };
-    this.isEditing = false;
+    this.currentRecommendation.set({ id: 0, parcelleId: 1, quantiteEau: 20.0, justification: '' });
+    this.isEditing.set(false);
   }
 }

@@ -6,11 +6,11 @@
 
     <!-- Formulaire d'Ajout/Edition -->
     <div class="glass-card" style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05);">
-        <h3 style="margin-top:0">{{ isEditing ? 'Modifier' : 'Ajouter' }} un Modèle</h3>
+        <h3 style="margin-top:0">{{ isEditing() ? 'Modifier' : 'Ajouter' }} un Modèle</h3>
         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 150px;">
                 <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Type</label>
-                <select [(ngModel)]="currentModel.type"
+                <select [ngModel]="currentModel().type" (ngModelChange)="currentModel().type = $event"
                     style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
                     <option value="REGRESSION">Régression</option>
                     <option value="CLASSIFICATION">Classification</option>
@@ -19,22 +19,25 @@
             </div>
             <div style="flex: 1; min-width: 100px;">
                 <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Version</label>
-                <input type="text" [(ngModel)]="currentModel.version" placeholder="1.0"
+                <input type="text" [ngModel]="currentModel().version" (ngModelChange)="currentModel().version = $event"
+                    placeholder="1.0"
                     style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
             </div>
             <div style="flex: 1; min-width: 150px;">
                 <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Date Apprentissage</label>
-                <input type="date" [(ngModel)]="currentModel.dateApprentissage"
+                <input type="date" [ngModel]="currentModel().dateApprentissage"
+                    (ngModelChange)="currentModel().dateApprentissage = $event"
                     style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
             </div>
             <div style="flex: 1; min-width: 120px;">
                 <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Précision (0-1)</label>
-                <input type="number" [(ngModel)]="currentModel.precision" step="0.01" min="0" max="1"
+                <input type="number" [ngModel]="currentModel().precision"
+                    (ngModelChange)="currentModel().precision = $event" step="0.01" min="0" max="1"
                     style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
             </div>
             <div style="display: flex; align-items: flex-end; gap: 0.5rem;">
-                <button class="btn-primary" (click)="saveModel()">{{ isEditing ? 'Enregistrer' : 'Ajouter' }}</button>
-                <button *ngIf="isEditing" class="btn-primary" style="background: rgba(255,255,255,0.1);"
+                <button class="btn-primary" (click)="saveModel()">{{ isEditing() ? 'Enregistrer' : 'Ajouter' }}</button>
+                <button *ngIf="isEditing()" class="btn-primary" style="background: rgba(255,255,255,0.1);"
                     (click)="resetForm()">Annuler</button>
             </div>
         </div>
@@ -42,7 +45,7 @@
 
     <!-- Liste des Modèles -->
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
-        <div *ngFor="let m of models" class="glass-card" style="padding: 1.5rem;">
+        <div *ngFor="let m of models()" class="glass-card" style="padding: 1.5rem;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                 <div style="flex: 1;">
                     <h3 style="color: var(--primary-color); margin-top: 0;">{{m.type}}</h3>
@@ -59,12 +62,12 @@
                     <button class="btn-primary" style="padding: 0.3rem 0.6rem; font-size: 0.7rem; background: #6366f1;"
                         (click)="editModel(m)">Editer</button>
                     <button class="btn-primary" style="padding: 0.3rem 0.6rem; font-size: 0.7rem; background: #ef4444;"
-                        (click)="deleteModel(m.id)">Supprimer</button>
+                        (click)="deleteModel(m.id!)">Supprimer</button>
                 </div>
             </div>
         </div>
 
-        <div *ngIf="models.length === 0" class="glass-card"
+        <div *ngIf="models().length === 0" class="glass-card"
             style="text-align: center; border: 1px dashed var(--glass-border); background: transparent;">
             <p>Aucun modèle trouvé.</p>
         </div>

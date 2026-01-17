@@ -4,23 +4,23 @@
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
         <div class="glass-card" style="text-align: center; padding: 1.5rem;">
             <h3 style="color: var(--primary-color)">Capteurs Actifs</h3>
-            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats.sensorsCount}}</p>
+            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats().sensorsCount}}</p>
         </div>
         <div class="glass-card" style="text-align: center; padding: 1.5rem;">
             <h3 style="color: var(--secondary-color)">Recommandations IA</h3>
-            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats.recommendationsCount}}</p>
+            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats().recommendationsCount}}</p>
         </div>
         <div class="glass-card" style="text-align: center; padding: 1.5rem;">
             <h3 style="color: var(--accent-color)">Observations</h3>
-            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats.observationsCount}}</p>
+            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats().observationsCount}}</p>
         </div>
         <div class="glass-card" style="text-align: center; padding: 1.5rem;">
             <h3 style="color: var(--primary-color)">Modèles IA</h3>
-            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats.modelsCount}}</p>
+            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats().modelsCount}}</p>
         </div>
         <div class="glass-card" style="text-align: center; padding: 1.5rem;">
             <h3 style="color: var(--secondary-color)">Précision Moyenne</h3>
-            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats.averagePrecision}}%</p>
+            <p style="font-size: 3rem; font-weight: 700; margin: 0;">{{stats().averagePrecision}}%</p>
         </div>
     </div>
 </div>

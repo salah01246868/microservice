@@ -6,28 +6,31 @@
 
     <!-- Formulaire d'Ajout/Edition -->
     <div class="glass-card" style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05);">
-        <h3 style="margin-top:0">{{ isEditing ? 'Modifier' : 'Ajouter' }} une Recommandation</h3>
+        <h3 style="margin-top:0">{{ isEditing() ? 'Modifier' : 'Ajouter' }} une Recommandation</h3>
         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 100px;">
                 <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Parcelle ID</label>
-                <input type="number" [(ngModel)]="currentRecommendation.parcelleId"
+                <input type="number" [ngModel]="currentRecommendation().parcelleId"
+                    (ngModelChange)="currentRecommendation().parcelleId = $event"
                     style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
             </div>
             <div style="flex: 1; min-width: 120px;">
                 <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Quantité d'eau (L)</label>
-                <input type="number" [(ngModel)]="currentRecommendation.quantiteEau" step="0.1"
+                <input type="number" [ngModel]="currentRecommendation().quantiteEau"
+                    (ngModelChange)="currentRecommendation().quantiteEau = $event" step="0.1"
                     style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
             </div>
             <div style="flex: 2; min-width: 200px;">
                 <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Justification</label>
-                <input type="text" [(ngModel)]="currentRecommendation.justification"
+                <input type="text" [ngModel]="currentRecommendation().justification"
+                    (ngModelChange)="currentRecommendation().justification = $event"
                     placeholder="Raison de la recommandation"
                     style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
             </div>
             <div style="display: flex; align-items: flex-end; gap: 0.5rem;">
-                <button class="btn-primary" (click)="saveRecommendation()">{{ isEditing ? 'Enregistrer' : 'Ajouter'
+                <button class="btn-primary" (click)="saveRecommendation()">{{ isEditing() ? 'Enregistrer' : 'Ajouter'
                     }}</button>
-                <button *ngIf="isEditing" class="btn-primary" style="background: rgba(255,255,255,0.1);"
+                <button *ngIf="isEditing()" class="btn-primary" style="background: rgba(255,255,255,0.1);"
                     (click)="resetForm()">Annuler</button>
             </div>
         </div>
@@ -45,7 +48,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let r of recommendations"
+                <tr *ngFor="let r of recommendations()"
                     style="border-bottom: 1px solid var(--glass-border); transition: background 0.2s;">
                     <td style="padding: 1.2rem;">{{r.dateCalcul | date:'short'}}</td>
                     <td style="padding: 1.2rem;">{{r.parcelleId}}</td>
@@ -62,10 +65,10 @@
                             (click)="editRecommendation(r)">Editer</button>
                         <button class="btn-primary"
                             style="padding: 0.3rem 0.6rem; font-size: 0.7rem; background: #ef4444;"
-                            (click)="deleteRecommendation(r.id)">Supprimer</button>
+                            (click)="deleteRecommendation(r.id!)">Supprimer</button>
                     </td>
                 </tr>
-                <tr *ngIf="recommendations.length === 0">
+                <tr *ngIf="recommendations().length === 0">
                     <td colspan="5" style="padding: 3rem; text-align: center; opacity: 0.6;">
                         En attente de nouvelles observations pour générer des recommandations...
                     </td>

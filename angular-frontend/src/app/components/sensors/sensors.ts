@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { IrrigationService } from '../../services/irrigation.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -11,9 +11,9 @@ import { Capteur } from '../../models/interfaces';
   templateUrl: './sensors.html'
 })
 export class SensorsComponent implements OnInit {
-  sensors: Capteur[] = [];
-  currentSensor: Capteur = { id: 0, type: 'HUMIDITE', parcelleId: 1, emplacement: '' };
-  isEditing = false;
+  sensors = signal<Capteur[]>([]);
+  currentSensor = signal<Capteur>({ id: 0, type: 'HUMIDITE', parcelleId: 1, emplacement: '' });
+  isEditing = signal(false);
 
   constructor(private irrigationService: IrrigationService) { }
 
@@ -23,19 +23,19 @@ export class SensorsComponent implements OnInit {
 
   refresh(): void {
     this.irrigationService.getCapteurs().subscribe(data => {
-      this.sensors = data;
+      this.sensors.set(data);
     });
   }
 
   saveSensor(): void {
-    if (this.isEditing && this.currentSensor.id) {
-      this.irrigationService.updateCapteur(this.currentSensor.id, this.currentSensor).subscribe(() => {
+    const sensorData = this.currentSensor();
+    if (this.isEditing() && sensorData.id) {
+      this.irrigationService.updateCapteur(sensorData.id, sensorData).subscribe(() => {
         this.resetForm();
         this.refresh();
       });
     } else {
-      // Remove ID for creation if it's 0 or undefined, backend handles generation
-      const { id, ...newSensor } = this.currentSensor;
+      const { id, ...newSensor } = sensorData;
       this.irrigationService.createCapteur(newSensor as Capteur).subscribe(() => {
         this.resetForm();
         this.refresh();
@@ -44,8 +44,8 @@ export class SensorsComponent implements OnInit {
   }
 
   editSensor(sensor: Capteur): void {
-    this.currentSensor = { ...sensor };
-    this.isEditing = true;
+    this.currentSensor.set({ ...sensor });
+    this.isEditing.set(true);
   }
 
   deleteSensor(id: number): void {
@@ -57,8 +57,8 @@ export class SensorsComponent implements OnInit {
   }
 
   resetForm(): void {
-    this.currentSensor = { id: 0, type: 'HUMIDITE', parcelleId: 1, emplacement: '' };
-    this.isEditing = false;
+    this.currentSensor.set({ id: 0, type: 'HUMIDITE', parcelleId: 1, emplacement: '' });
+    this.isEditing.set(false);
   }
 }
 
