@@ -1,0 +1,7 @@
+/home/wassim-abderrazak/Desktop/salah/collecte-service/src/main/java/com/irrigation/collecte/service/CollecteService.java
+/home/wassim-abderrazak/Desktop/salah/collecte-service/src/main/java/com/irrigation/collecte/controller/CollecteController.java
+/home/wassim-abderrazak/Desktop/salah/collecte-service/src/main/java/com/irrigation/collecte/entity/Observation.java
+/home/wassim-abderrazak/Desktop/salah/collecte-service/src/main/java/com/irrigation/collecte/repository/ObservationRepository.java
+/home/wassim-abderrazak/Desktop/salah/collecte-service/src/main/java/com/irrigation/collecte/CollecteApplication.java
+/home/wassim-abderrazak/Desktop/salah/collecte-service/src/main/java/com/irrigation/collecte/entity/Capteur.java
+/home/wassim-abderrazak/Desktop/salah/collecte-service/src/main/java/com/irrigation/collecte/repository/CapteurRepository.java

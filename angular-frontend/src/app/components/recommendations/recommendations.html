@@ -1,0 +1,76 @@
+<div class="glass-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h2 style="margin:0">Recommandations d'Irrigation (IA)</h2>
+        <button class="btn-primary" (click)="refresh()">Actualiser</button>
+    </div>
+
+    <!-- Formulaire d'Ajout/Edition -->
+    <div class="glass-card" style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05);">
+        <h3 style="margin-top:0">{{ isEditing ? 'Modifier' : 'Ajouter' }} une Recommandation</h3>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 100px;">
+                <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Parcelle ID</label>
+                <input type="number" [(ngModel)]="currentRecommendation.parcelleId"
+                    style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
+            </div>
+            <div style="flex: 1; min-width: 120px;">
+                <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Quantité d'eau (L)</label>
+                <input type="number" [(ngModel)]="currentRecommendation.quantiteEau" step="0.1"
+                    style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
+            </div>
+            <div style="flex: 2; min-width: 200px;">
+                <label style="display: block; margin-bottom: 0.5rem; font-size: 0.8rem;">Justification</label>
+                <input type="text" [(ngModel)]="currentRecommendation.justification"
+                    placeholder="Raison de la recommandation"
+                    style="width: 100%; background: var(--glass-bg); color: white; border: 1px solid var(--glass-border); padding: 0.5rem; border-radius: 8px;">
+            </div>
+            <div style="display: flex; align-items: flex-end; gap: 0.5rem;">
+                <button class="btn-primary" (click)="saveRecommendation()">{{ isEditing ? 'Enregistrer' : 'Ajouter'
+                    }}</button>
+                <button *ngIf="isEditing" class="btn-primary" style="background: rgba(255,255,255,0.1);"
+                    (click)="resetForm()">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-card" style="padding: 0; overflow: hidden; border: none;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead style="background: rgba(255, 255, 255, 0.05);">
+                <tr>
+                    <th style="padding: 1.2rem;">Date</th>
+                    <th style="padding: 1.2rem;">Parcelle</th>
+                    <th style="padding: 1.2rem;">Quantité d'eau (L)</th>
+                    <th style="padding: 1.2rem;">Justification</th>
+                    <th style="padding: 1.2rem;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of recommendations"
+                    style="border-bottom: 1px solid var(--glass-border); transition: background 0.2s;">
+                    <td style="padding: 1.2rem;">{{r.dateCalcul | date:'short'}}</td>
+                    <td style="padding: 1.2rem;">{{r.parcelleId}}</td>
+                    <td style="padding: 1.2rem;">
+                        <span
+                            style="background: rgba(80, 227, 194, 0.2); color: var(--secondary-color); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600;">
+                            {{r.quantiteEau}} L
+                        </span>
+                    </td>
+                    <td style="padding: 1.2rem;">{{r.justification}}</td>
+                    <td style="padding: 1.2rem;">
+                        <button class="btn-primary"
+                            style="padding: 0.3rem 0.6rem; font-size: 0.7rem; background: #6366f1; margin-right: 0.5rem;"
+                            (click)="editRecommendation(r)">Editer</button>
+                        <button class="btn-primary"
+                            style="padding: 0.3rem 0.6rem; font-size: 0.7rem; background: #ef4444;"
+                            (click)="deleteRecommendation(r.id)">Supprimer</button>
+                    </td>
+                </tr>
+                <tr *ngIf="recommendations.length === 0">
+                    <td colspan="5" style="padding: 3rem; text-align: center; opacity: 0.6;">
+                        En attente de nouvelles observations pour générer des recommandations...
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

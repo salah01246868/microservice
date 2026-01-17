@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: analyse-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: analyse-service
+  template:
+    metadata:
+      labels:
+        app: analyse-service
+    spec:
+      containers:
+      - name: analyse-service
+        image: irrigation/analyse-service:latest
+        ports:
+        - containerPort: 8082
+        env:
+        - name: SPRING_CLOUD_CONFIG_URI
+          value: "http://config-service:8888"
+        - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+          value: "kafka:9092"
+        - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+          value: "http://discovery-service:8761/eureka/"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: analyse-service
+spec:
+  selector:
+    app: analyse-service
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082

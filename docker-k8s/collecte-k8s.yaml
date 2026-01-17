@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: collecte-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: collecte-service
+  template:
+    metadata:
+      labels:
+        app: collecte-service
+    spec:
+      containers:
+      - name: collecte-service
+        image: irrigation/collecte-service:latest
+        ports:
+        - containerPort: 8081
+        env:
+        - name: SPRING_CLOUD_CONFIG_URI
+          value: "http://config-service:8888"
+        - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+          value: "kafka:9092"
+        - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+          value: "http://discovery-service:8761/eureka/"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: collecte-service
+spec:
+  selector:
+    app: collecte-service
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081

@@ -1,0 +1,9 @@
+com/irrigation/collecte/entity/Observation$ObservationBuilder.class
+com/irrigation/collecte/service/CollecteService.class
+com/irrigation/collecte/CollecteApplication.class
+com/irrigation/collecte/controller/CollecteController.class
+com/irrigation/collecte/entity/Capteur.class
+com/irrigation/collecte/entity/Capteur$CapteurBuilder.class
+com/irrigation/collecte/entity/Observation.class
+com/irrigation/collecte/repository/ObservationRepository.class
+com/irrigation/collecte/repository/CapteurRepository.class

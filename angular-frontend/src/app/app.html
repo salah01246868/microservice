@@ -1,0 +1,18 @@
+<nav>
+  <div class="logo">
+    <h1
+      style="margin:0; font-size: 1.5rem; background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+      AquaOptimize</h1>
+  </div>
+  <ul>
+    <li><a routerLink="/dashboard">Tableau de bord</a></li>
+    <li><a routerLink="/sensors">Capteurs</a></li>
+    <li><a routerLink="/observations">Observations</a></li>
+    <li><a routerLink="/models">Modèles IA</a></li>
+    <li><a routerLink="/recommendations">Recommandations</a></li>
+  </ul>
+</nav>
+
+<div class="container" style="padding: 2rem;">
+  <router-outlet></router-outlet>
+</div>

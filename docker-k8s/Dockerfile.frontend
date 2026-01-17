@@ -1,0 +1,33 @@
+# Stage 1: Build the Angular application
+# Use Node.js 20+ as required by Angular 17+
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Copy package.json and package-lock.json first to leverage Docker cache
+COPY angular-frontend/package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy the rest of the application code
+COPY angular-frontend/ .
+
+# Build the application for production
+# This will output to /app/dist/angular-frontend/browser
+RUN npm run build -- --configuration production
+
+# Stage 2: Serve the application with Nginx
+FROM nginx:alpine
+
+# Remove default nginx website
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy built assets from builder stage
+COPY --from=builder /app/dist/angular-frontend/browser /usr/share/nginx/html
+
+# Build requires access from external validation
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
