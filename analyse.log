@@ -1,0 +1,251 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2026-01-17T11:51:27.386+01:00  INFO 12380 --- [analyse-service] [           main] c.irrigation.analyse.AnalyseApplication  : Starting AnalyseApplication v1.0.0 using Java 17.0.12 with PID 12380 (C:\Users\MediaStudio\Desktop\salah\analyse-service\target\analyse-service-1.0.0.jar started by salah in C:\Users\MediaStudio\Desktop\salah)
+2026-01-17T11:51:27.398+01:00  INFO 12380 --- [analyse-service] [           main] c.irrigation.analyse.AnalyseApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-01-17T11:51:27.532+01:00  INFO 12380 --- [analyse-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-01-17T11:51:27.534+01:00  INFO 12380 --- [analyse-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=analyse-service, profiles=[default], label=null, version=null, state=null
+2026-01-17T11:51:29.336+01:00  INFO 12380 --- [analyse-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-17T11:51:29.747+01:00  INFO 12380 --- [analyse-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 392 ms. Found 2 JPA repository interfaces.
+2026-01-17T11:51:30.661+01:00  INFO 12380 --- [analyse-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb7e9b08-6ae9-369e-bd44-bc0550c46f28
+2026-01-17T11:51:31.182+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$RetryInterceptorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$RetryInterceptorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-01-17T11:51:31.191+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.205+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.241+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.492+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.493+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$657/0x00000244b13f5c58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.499+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.524+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.535+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.538+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.541+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.543+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.563+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.586+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.591+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.593+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.599+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.603+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerRetryConfig' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerRetryConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.620+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancedRetryFactory' of type [org.springframework.cloud.loadbalancer.blocking.retry.BlockingLoadBalancedRetryFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:31.627+01:00  WARN 12380 --- [analyse-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.RetryLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-01-17T11:51:32.929+01:00  INFO 12380 --- [analyse-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-01-17T11:51:32.957+01:00  INFO 12380 --- [analyse-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-17T11:51:32.958+01:00  INFO 12380 --- [analyse-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-01-17T11:51:33.040+01:00  INFO 12380 --- [analyse-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-17T11:51:33.042+01:00  INFO 12380 --- [analyse-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5499 ms
+2026-01-17T11:51:33.383+01:00  INFO 12380 --- [analyse-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-17T11:51:33.545+01:00  INFO 12380 --- [analyse-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-01-17T11:51:33.651+01:00  INFO 12380 --- [analyse-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-17T11:51:34.351+01:00  INFO 12380 --- [analyse-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-17T11:51:34.416+01:00  INFO 12380 --- [analyse-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-17T11:51:34.698+01:00  INFO 12380 --- [analyse-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@54f373d4
+2026-01-17T11:51:34.705+01:00  INFO 12380 --- [analyse-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-17T11:51:36.390+01:00  INFO 12380 --- [analyse-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-17T11:51:36.460+01:00  INFO 12380 --- [analyse-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-17T11:51:37.884+01:00  WARN 12380 --- [analyse-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-17T11:51:38.131+01:00  INFO 12380 --- [analyse-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'collecte-service' URL not provided. Will try picking an instance via load-balancing.
+2026-01-17T11:51:39.842+01:00  INFO 12380 --- [analyse-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-01-17T11:51:40.700+01:00  WARN 12380 --- [analyse-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-01-17T11:51:40.838+01:00  INFO 12380 --- [analyse-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-01-17T11:51:41.020+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-01-17T11:51:41.032+01:00  INFO 12380 --- [analyse-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-01-17T11:51:41.090+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-01-17T11:51:41.091+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-01-17T11:51:41.091+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-01-17T11:51:41.091+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-01-17T11:51:41.092+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-01-17T11:51:41.092+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-01-17T11:51:41.092+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-01-17T11:51:41.600+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-01-17T11:51:41.605+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-01-17T11:51:41.610+01:00  INFO 12380 --- [analyse-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-01-17T11:51:41.619+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1768647101618 with initial instances count: 1
+2026-01-17T11:51:41.626+01:00  INFO 12380 --- [analyse-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ANALYSE-SERVICE with eureka with status UP
+2026-01-17T11:51:41.627+01:00  INFO 12380 --- [analyse-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1768647101627, current=UP, previous=STARTING]
+2026-01-17T11:51:41.631+01:00  INFO 12380 --- [analyse-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE/DESKTOP-NC7E353.lan:analyse-service:8082: registering service...
+2026-01-17T11:51:41.679+01:00  INFO 12380 --- [analyse-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-01-17T11:51:41.681+01:00  INFO 12380 --- [analyse-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-01-17T11:51:41.705+01:00  INFO 12380 --- [analyse-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE/DESKTOP-NC7E353.lan:analyse-service:8082 - registration status: 204
+2026-01-17T11:51:42.064+01:00  INFO 12380 --- [analyse-service] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9093]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-analyse-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = analyse-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-01-17T11:51:42.210+01:00  INFO 12380 --- [analyse-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2026-01-17T11:51:42.210+01:00  INFO 12380 --- [analyse-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2026-01-17T11:51:42.211+01:00  INFO 12380 --- [analyse-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1768647102206
+2026-01-17T11:51:42.217+01:00  INFO 12380 --- [analyse-service] [           main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Subscribed to topic(s): observations-topic
+2026-01-17T11:51:42.251+01:00  INFO 12380 --- [analyse-service] [           main] c.irrigation.analyse.AnalyseApplication  : Started AnalyseApplication in 18.141 seconds (process running for 19.343)
+2026-01-17T11:51:42.751+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:42.754+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:42.754+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:42.865+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:42.867+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:42.867+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:42.974+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:42.974+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:42.975+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:43.207+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:43.208+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:43.208+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:43.629+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:43.629+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:43.629+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:44.546+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:44.546+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:44.547+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:45.594+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:45.596+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:45.596+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:46.697+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:46.697+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:46.698+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:47.867+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:47.869+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:47.869+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:49.034+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:49.035+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:49.035+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:49.890+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:49.891+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:49.891+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:50.749+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:50.758+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:50.759+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:51.913+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:51.914+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:51.914+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:53.065+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:53.066+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:53.066+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:53.992+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:53.996+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:53.997+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:54.848+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:54.848+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:54.848+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:55.886+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:55.888+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:55.890+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:56.805+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:56.809+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:56.809+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:57.879+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:57.886+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:57.886+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:51:59.110+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:51:59.110+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:51:59.110+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:52:00.275+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:52:00.289+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:52:00.289+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:52:01.383+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:52:01.386+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:52:01.387+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:52:02.508+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:52:02.508+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:52:02.508+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:52:03.671+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:52:03.676+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:52:03.676+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:52:04.655+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:52:04.655+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:52:04.656+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
+2026-01-17T11:52:05.576+01:00  INFO 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Node -1 disconnected.
+2026-01-17T11:52:05.576+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Connection to node -1 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2026-01-17T11:52:05.576+01:00  WARN 12380 --- [analyse-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-analyse-group-1, groupId=analyse-group] Bootstrap broker localhost:9093 (id: -1 rack: null) disconnected
